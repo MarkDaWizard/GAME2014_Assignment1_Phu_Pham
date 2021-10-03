@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "com.SleepyDragon.GAME2014_Assignment1_Phu_Pham",
-        "processId": 3102,
+        "processId": 3866,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,24 @@
             "deviceId": "emulator-5554",
             "name": "com.SleepyDragon.GAME2014_Assignment1_Phu_Pham",
             "processId": 3102,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.SleepyDragon.GAME2014_Assignment1_Phu_Pham",
+            "processId": 3438,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.SleepyDragon.GAME2014_Assignment1_Phu_Pham",
+            "processId": 3589,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.SleepyDragon.GAME2014_Assignment1_Phu_Pham",
+            "processId": 3866,
             "exited": false
         }
     ],
