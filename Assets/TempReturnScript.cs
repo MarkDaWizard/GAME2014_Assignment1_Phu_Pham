@@ -15,6 +15,6 @@ public class TempReturnScript : MonoBehaviour
 
 public void onReturnButtonClick()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("GameOverScene");
     }
 }
