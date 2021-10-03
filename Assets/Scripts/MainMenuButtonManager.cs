@@ -1,3 +1,12 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: MainMenuButtonManager       |
+//| Date last modified: 2/10/2021       |
+//|*************************************|
+
+
 using UnityEngine.SceneManagement;
 using UnityEngine;
 

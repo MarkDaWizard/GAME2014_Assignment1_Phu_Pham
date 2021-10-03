@@ -2,7 +2,7 @@
 //| NAME: Phu Pham                      |
 //| ID: 101250748                       |
 //|                                     |
-//| Script: GameOverSceneScript         |
+//| Script: TempReturnScript            |
 //| Date last modified: 2/10/2021       |
 //|*************************************|
 
@@ -10,16 +10,11 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class GameOverSceneScript : MonoBehaviour
+public class TempReturnScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-public void onMenuButtonClick()
+
+public void onReturnButtonClick()
     {
         SceneManager.LoadScene("MainMenuScene");
-    }
-
-    public void onRetryButtonClick()
-    {
-        SceneManager.LoadScene("PlayScene");
     }
 }
