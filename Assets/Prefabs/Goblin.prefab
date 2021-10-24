@@ -139,11 +139,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398d110924126ae4ca4df1bafbe09ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
+  movementSpeed: 0.5
   damage: 5
   health: 5
+  animator: {fileID: 5920222948621197116}
   rb: {fileID: 172809445}
   waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!70 &3511403865503946416
 CapsuleCollider2D:

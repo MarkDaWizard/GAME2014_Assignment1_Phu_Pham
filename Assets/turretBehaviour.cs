@@ -5,6 +5,9 @@ using UnityEngine;
 public class turretBehaviour : MonoBehaviour
 {
     public GameObject buildingFX;
+    public AudioSource shootSFX;
+    public Transform turretHead;
+    public Animator animator;
 
     public GameObject turret;
     public float buildTime = 2;
@@ -24,7 +27,7 @@ public class turretBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(nextFire);
+        
         if (buildTime > 0)
         {
             
@@ -41,6 +44,8 @@ public class turretBehaviour : MonoBehaviour
             Collider2D hitCollider = Physics2D.OverlapCircle(transform.position, range, 6);
             if (hitCollider != null)
             {
+                turretHead.LookAt(hitCollider.transform, new Vector3(0,0,1));
+                
                 if (nextFire > 0)
                 {
                     
@@ -50,9 +55,12 @@ public class turretBehaviour : MonoBehaviour
                 {
                     hitCollider.GetComponent<MonsterBehaviourScript>().onHit(damage);
                     nextFire = fireRate;
+                    shootSFX.Play();
+                    animator.SetTrigger("isShooting");
                     
                 }
             }
+            
         }
 
     }

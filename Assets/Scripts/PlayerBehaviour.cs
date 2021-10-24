@@ -39,14 +39,20 @@ public class PlayerBehaviour : MonoBehaviour
                 worldPos = playerTilemap.CellToWorld(tilemapPos);
                 worldPos.z = playerTilemap.transform.position.z;
 
-                //Prevent player from building in terrain
-                if (playerTilemap.HasTile(tilemapPos) != true)
+                //Check for player cash
+                if (GameObject.FindObjectOfType<playerManager>().getCash() > 100f)
                 {
-                    Instantiate<GameObject>(turretPrefab, worldPos, new Quaternion(), transform);
-                    playerTilemap.SetTile(tilemapPos, testTile);
+
+
+                    //Prevent player from building in terrain
+                    if (playerTilemap.HasTile(tilemapPos) != true)
+                    {
+                        Instantiate<GameObject>(turretPrefab, worldPos, new Quaternion(), transform);
+                        playerTilemap.SetTile(tilemapPos, testTile);
+                        GameObject.FindObjectOfType<playerManager>().builtTower();
+                    }
                 }
-                else
-                    Debug.Log("Terrain detected");
+                
             }
         }
     }

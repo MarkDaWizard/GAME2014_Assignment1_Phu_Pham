@@ -53,20 +53,30 @@ public class MonsterBehaviourScript : MonoBehaviour
             }
         }
         else if (curWaypoint >= waypoints.Length)
+        {
+            GameObject.FindObjectOfType<playerManager>().onLiveLost();
             Destroy(gameObject);
+        }
     }
 
+    //Called when this monster gets hit
     public void onHit(float damage)
     {
         health -= damage;
-        Debug.Log("hit");
 
+
+        //Destroy monster if dead
         if (health <= 0)
         {
             isDead = true;
             animator.SetBool("IsDead", true);
             rb.velocity = Vector2.zero;
             StartCoroutine(ExecuteAfterTime(2));
+        }
+        else
+        {
+            animator.SetTrigger("isHit");
+            
         }
     }
 
