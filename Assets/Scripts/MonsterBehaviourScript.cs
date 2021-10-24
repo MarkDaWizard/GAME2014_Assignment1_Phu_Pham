@@ -1,3 +1,11 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: MonsterBehaviourScript
+//| Desc: Manages Monster behaviour such as their paths, health and speed
+//| Date last modified: 24/10/2021      |
+//|*************************************|
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

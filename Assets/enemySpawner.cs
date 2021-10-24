@@ -1,3 +1,12 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: enemySpawner                |
+//| Desc: Spawns a certain amount of enemies after a delay
+//| Date last modified: 24/10/2021      |
+//|*************************************|
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

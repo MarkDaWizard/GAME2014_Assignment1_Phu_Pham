@@ -1,3 +1,12 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: PlayerBehaviour             |
+//| Desc: Manages the player's input
+//| Date last modified: 24/10/2021      |
+//|*************************************|
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

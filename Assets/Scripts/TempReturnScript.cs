@@ -2,7 +2,8 @@
 //| NAME: Phu Pham                      |
 //| ID: 101250748                       |
 //|                                     |
-//| Script: TempReturnScript            |
+//| Script: TempReturnScript
+//| Desc: A temporary script use for return player to main menu
 //| Date last modified: 2/10/2021       |
 //|*************************************|
 

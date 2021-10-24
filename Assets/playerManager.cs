@@ -1,3 +1,13 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: playerManager
+//| Desc: Manages player stats like lives and scores as well as the UI texts
+//| Date last modified: 24/10/2021      |
+//|*************************************|
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

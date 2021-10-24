@@ -1,3 +1,11 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: turretBehaviour
+//| Desc: Manages turret's behaviour such as their fire rate, cost and damage
+//| Date last modified: 24/10/2021      |
+//|*************************************|
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

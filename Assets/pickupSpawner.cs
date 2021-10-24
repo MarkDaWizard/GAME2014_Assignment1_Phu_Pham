@@ -1,3 +1,12 @@
+//|*************************************|
+//| NAME: Phu Pham                      |
+//| ID: 101250748                       |
+//|                                     |
+//| Script: pickupSpawner
+//| Desc: Spawns picks and manages their behaviour
+//| Date last modified: 24/10/2021      |
+//|*************************************|
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -3,6 +3,7 @@
 //| ID: 101250748                       |
 //|                                     |
 //| Script: MainMenuButtonManager       |
+//| Desc: Provides functionality for button in the mainmenu
 //| Date last modified: 2/10/2021       |
 //|*************************************|
 

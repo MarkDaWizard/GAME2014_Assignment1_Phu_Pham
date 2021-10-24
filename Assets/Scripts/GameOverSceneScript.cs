@@ -2,7 +2,8 @@
 //| NAME: Phu Pham                      |
 //| ID: 101250748                       |
 //|                                     |
-//| Script: GameOverSceneScript         |
+//| Script: GameOverSceneScript
+//| Desc: Manages the buttons on the game over scene
 //| Date last modified: 2/10/2021       |
 //|*************************************|
 
