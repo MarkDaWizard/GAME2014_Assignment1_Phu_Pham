@@ -14,8 +14,15 @@ using UnityEngine;
 public class TempReturnScript : MonoBehaviour
 {
 
-public void onReturnButtonClick()
+    public void onReturnButtonClick()
     {
         SceneManager.LoadScene("MainMenuScene");
     }
+    public void onOverButtonClick()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
 }
+
+
+

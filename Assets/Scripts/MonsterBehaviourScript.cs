@@ -24,7 +24,7 @@ public class MonsterBehaviourScript : MonoBehaviour
     public Transform[] waypoints;
 
 
-    private GameObject[] wpArr;
+    //private GameObject[] wpArr;
     private int curWaypoint;
     private Vector3 distanceFromTarget = Vector3.zero;
     private bool isDead = false;
@@ -32,10 +32,11 @@ public class MonsterBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wpArr = GameObject.FindGameObjectsWithTag("Waypoint");
-        for (int i = 0; i < 7; i++)
+        //wpArr = GameObject.FindGameObjectsWithTag("Waypoint");
+        for (int i = 0; i < 8; i++)
         {
-            waypoints[i] = wpArr[i].transform;
+            //waypoints[i] = wpArr[i].transform;
+            waypoints[i] = GameObject.Find("Waypoint" + i).transform;
         }
     }
 
