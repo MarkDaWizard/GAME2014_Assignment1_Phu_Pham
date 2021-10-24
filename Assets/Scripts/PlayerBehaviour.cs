@@ -26,32 +26,51 @@ public class PlayerBehaviour : MonoBehaviour
     {
         //tilemapPos = playerTilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         
-
+        //Detects touch input
         if(Input.touchCount > 0)
         {
+
             
-            
+
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                tilemapPos = playerTilemap.WorldToCell(Camera.main.ScreenToWorldPoint(touch.position));
-                tilemapPos.z = 0;
-                worldPos = playerTilemap.CellToWorld(tilemapPos);
-                worldPos.z = playerTilemap.transform.position.z;
-
-                //Check for player cash
-                if (GameObject.FindObjectOfType<playerManager>().getCash() > 100f)
-                {
-
-
-                    //Prevent player from building in terrain
-                    if (playerTilemap.HasTile(tilemapPos) != true)
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
+                //if (hit != null && hit.collider != null)
+                //{
+                    
+                    //Detect pickups
+                    if (hit.collider != null && hit.collider.tag == "Pickup")
                     {
-                        Instantiate<GameObject>(turretPrefab, worldPos, new Quaternion(), transform);
-                        playerTilemap.SetTile(tilemapPos, testTile);
-                        GameObject.FindObjectOfType<playerManager>().builtTower();
+                        hit.collider.GetComponentInParent<pickupSpawner>().onPickupTouch();
+                        //GameObject.FindObjectOfType<pickupSpawner>().onPickupTouch();
                     }
-                }
+                    //Build tower if no pickup
+                    else
+                    {
+                        tilemapPos = playerTilemap.WorldToCell(Camera.main.ScreenToWorldPoint(touch.position));
+                        tilemapPos.z = 0;
+                        worldPos = playerTilemap.CellToWorld(tilemapPos);
+                        worldPos.z = playerTilemap.transform.position.z;
+
+                        //Check for player cash
+                        if (GameObject.FindObjectOfType<playerManager>().getCash() >= 100f)
+                        {
+
+
+                            //Prevent player from building in terrain
+                            if (playerTilemap.HasTile(tilemapPos) != true)
+                            {
+                                Instantiate<GameObject>(turretPrefab, worldPos, new Quaternion(), transform);
+                                playerTilemap.SetTile(tilemapPos, testTile);
+                                GameObject.FindObjectOfType<playerManager>().builtTower();
+                            }
+                        }
+                    }
+                //}
+
+
+                
                 
             }
         }

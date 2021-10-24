@@ -56,4 +56,19 @@ public class playerManager : MonoBehaviour
     {
         return playerCash;
     }
+
+    public void onPauseButtonClick()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void onResumeButtonClick()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void onMenuButtonClick()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
 }

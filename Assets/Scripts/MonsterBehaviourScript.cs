@@ -9,9 +9,14 @@ public class MonsterBehaviourScript : MonoBehaviour
     public float damage;
     public float health;
     public Animator animator;
+    public AudioSource deathSFX;
+    public AudioSource hitSFX;
 
     public Rigidbody2D rb;
     public Transform[] waypoints;
+
+
+    private GameObject[] wpArr;
     private int curWaypoint;
     private Vector3 distanceFromTarget = Vector3.zero;
     private bool isDead = false;
@@ -19,7 +24,11 @@ public class MonsterBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        wpArr = GameObject.FindGameObjectsWithTag("Waypoint");
+        for (int i = 0; i < 7; i++)
+        {
+            waypoints[i] = wpArr[i].transform;
+        }
     }
 
     // Update is called once per frame
@@ -63,15 +72,17 @@ public class MonsterBehaviourScript : MonoBehaviour
     public void onHit(float damage)
     {
         health -= damage;
-
+        hitSFX.Play();
 
         //Destroy monster if dead
         if (health <= 0)
         {
+            deathSFX.Play();
             isDead = true;
             animator.SetBool("IsDead", true);
             rb.velocity = Vector2.zero;
             StartCoroutine(ExecuteAfterTime(2));
+            GameObject.FindObjectOfType<playerManager>().gainCash();
         }
         else
         {
