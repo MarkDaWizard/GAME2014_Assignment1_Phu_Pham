@@ -48,6 +48,7 @@ public class pickupSpawner : MonoBehaviour
 
     }
 
+    //Calls when a pickup is touched
     public void onPickupTouch()
     {
         if (isSpawned == true)
@@ -59,6 +60,7 @@ public class pickupSpawner : MonoBehaviour
         }
     }
 
+    //Spawn pickup after a set time
     public void spawnPickup()
     {
         pickupObj.SetActive(true);

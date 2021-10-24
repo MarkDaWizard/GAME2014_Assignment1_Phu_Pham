@@ -42,11 +42,12 @@ public class MonsterBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Check next waypoint
         if (curWaypoint < waypoints.Length && isDead != true)
         {
             distanceFromTarget = waypoints[curWaypoint].position - transform.position;
 
-
+            //Monster movement
             if ((transform.position.x < waypoints[curWaypoint].position.x) && transform.position.y < waypoints[curWaypoint].position.y)
             {
                 rb.velocity = new Vector2(movementSpeed, movementSpeed);
